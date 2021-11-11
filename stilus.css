@@ -17,6 +17,8 @@ article div {
     width: 200px;
     height: 400px;
     padding: 10px;
+    border: 1px solid gray;
+    border-radius: 8px;
 }
 
 img {
@@ -37,7 +39,6 @@ article div img{
 
 article div p{
     text-align: right;
-    border: 0.5px solid gray;
 }
 
 nav ul li {
@@ -55,4 +56,13 @@ nav ul {
 
 footer, header {
     text-align: center;
+}
+
+button {
+    border: 1px solid gray;
+}
+
+table, td, tr ,th {
+    border: 1px solid gray;
+    padding: 5px;
 }

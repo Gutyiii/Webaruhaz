@@ -17,8 +17,8 @@ $(function () {
     adatokBetoltese();
 
     function adatokMegjelenites() {
-        const szuloElem = $("#allomany");
-        const sablon = $(".termek");
+        const szuloElem = $("#tablazat");
+        const sablon = $(".tabla");
         tomb.forEach(function (elem, index) {
             const termek = sablon.clone().appendTo(szuloElem);
             const ujTermek = new Termek(termek, elem, index);
@@ -29,7 +29,7 @@ $(function () {
     $(window).on("kosarhozad", (esemeny) => {
         let aktTermek = esemeny.detail;
         kisKosar.setKoarhozAdd(aktTermek);
-       
+//        kisKosar.torol();
     });
 });
 
