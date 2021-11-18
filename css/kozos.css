@@ -1,0 +1,20 @@
+@charset "utf-8";
+
+main {
+    width: 80%;
+    max-width: 1000px;
+    margin: auto;
+}
+
+img {
+    width: 100%;
+}
+
+footer, header {
+    text-align: center;
+}
+
+td, tr ,th {
+    border: 1px solid gray;
+    padding: 5px;
+}

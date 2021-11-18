@@ -5,37 +5,55 @@ To change this template file, choose Tools | Templates
 and open the template in the editor.
 -->
 <html>
-    <head>
-        <title>TODO supply a title</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="stilus.css" rel="stylesheet" type="text/css"/>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <script src="kosar.js" type="text/javascript"></script>
-        <script src="termek.js" type="text/javascript"></script>
-        <script src="adminscript.js" type="text/javascript"></script>
-    </head>
-    <body>
-        <main>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Kezdőlap</a></li>
-                    <li><a href="#">Admin</a></li>
-                    <li>menü 3</li>
-                </ul>
-            </nav>
-            <header><h1>Webáruház</h1></header>
-            <article>
-                <table id="tablazat">
-                    <tr class="tabla"></tr>
-                </table>
-            </article>
-            <aside>
-                <div id="kosar">
 
-                </div>
-            </aside>
-            <footer>Gutyina András</footer>
-        </main>
-    </body>
+<head>
+    <title>TODO supply a title</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../css/kozos.css" rel="stylesheet" type="text/css" />
+    <link href="../css/admin.css" rel="stylesheet" type="text/css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="../script/kosar.js" type="text/javascript"></script>
+    <script src="../script/termek.js" type="text/javascript"></script>
+    <script src="../script/adminscript.js" type="text/javascript"></script>
+</head>
+
+<body>
+    <main>
+        <nav>
+            <ul>
+                <li><a href="index.html">Kezdőlap</a></li>
+                <li><a href="#">Admin</a></li>
+                <li><a href="fizetes.html">Fizetés</a></li>
+            </ul>
+        </nav>
+        <header>
+            <h1>Webáruház</h1>
+        </header>
+        <article>
+            <table id="allomany">
+                <!--<tr class='fejlec'>
+                    <th>Név:</th>
+                    <th>Kep:</th>
+                    <th>Leírás:</th>
+                    <th>Ár:</th>
+                    <th>Valamiért index:</th>
+                </tr>-->
+                <tr class="termek">
+                    <td class="nev">Csodás tájkép:</td>
+                    <td class="kep"><img src="../kepek/kep1.jpg" alt="asd"></td>
+                    <td class="leiras">Tükröződő fák egy kis tó partján a Duna mentén.</td>
+                    <td class="ar">20000</td>
+                    <td class="index">1</td>
+                    <td class="torolgomb"><button>Töröl</button></td>
+                    <td class="modositgomb"><button>Módosít</button></td>
+                    <!--<td class="torolgomb"><button>Töröl</button></td>
+                    <td class="modositgomb"><button>Módósít</button></td>-->
+                </tr>
+            </table>
+        </article>
+        <footer>Gutyina András</footer>
+    </main>
+</body>
+
 </html>

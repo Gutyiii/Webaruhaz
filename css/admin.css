@@ -1,0 +1,22 @@
+@charset "utf-8";
+
+main {
+    background-color: rgb(255, 251, 240);
+}
+
+img {
+    max-width: 120px;
+}
+
+nav ul li {
+    list-style-type: none;
+    border: 1px solid gray;
+    border-radius: 6px; 
+}
+
+nav ul {
+    display: grid;
+    grid-template-columns: 80px 80px 80px;
+    grid-gap: 10px;
+    text-align: center;
+}
