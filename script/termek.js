@@ -43,13 +43,20 @@ class TermekAdmin extends Termek {
         this.node.children(".modositgomb").on("click", () => {
             this.KattintasTriggerModosit();
         });
+        /*this.node.children(".ujAdatFelv").on("click", () => {
+            this.KattintasTriggerHozzad();
+        });*/
     };
     KattintasTriggerTorol() {
         let esemeny = new CustomEvent("atorolgomb", { detail: this.adat });
         window.dispatchEvent(esemeny);
-    }
+    };
     KattintasTriggerModosit() {
         let esemeny = new CustomEvent("amodositgomb", { detail: this.adat });
         window.dispatchEvent(esemeny);
-    }
+    };
+    /*KattintasTriggerHozzad() {
+        let esemeny = new CustomEvent("hozzaadgomb", { detail: this.adat });
+        window.dispatchEvent(esemeny);
+    };*/
 }

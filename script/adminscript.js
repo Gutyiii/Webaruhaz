@@ -1,39 +1,47 @@
 $(function () {
 
     const tomb = [];
-    const kisKosar = new Kosar();
+    const myAjax = new MyAjax();
+    let apiVegpont = "http://localhost:3000/termekek";
 
-    function adatokBetoltese() {
-        $.ajax({
-            url: "../forras/termekek.json",
-            success: function (result) {
-                result.forEach((value) => {
-                    tomb.push(value);
-                });
-                adatokMegjelenites();
-                //console.log(tomb);
-            }
-        });
-    }
-    adatokBetoltese();
+    myAjax.adatbeolvas(apiVegpont, tomb, adatokMegjelenites);
 
     function adatokMegjelenites() {
         const szuloElem = $("#allomany");
-        const sablon = $(".termek");
+        const sablon = $("thead .termek");
+        szuloElem.empty();
+        sablon.show();
         tomb.forEach(function (elem, index) {
             const termek = sablon.clone().appendTo(szuloElem);
             const ujTermek = new TermekAdmin(termek, elem, index);
         });
-        sablon.remove();
+        sablon.hide(); //remove helyett
     }
 
     $(window).on("atorolgomb", (esemeny) => {
-        let aktTermek = esemeny.detail;
-        alert("töröltél");
+        let aktTermek = esemeny.detail.id;
+        myAjax.adattorles(apiVegpont, aktTermek);
     });
+
+    $(".ujAdatFelv").on("click", () => {
+        let ujAdat = {
+            "nev": $("#bekertNev").val(),
+            "kep": $("#bekertKep").val(),
+            "leiras": $("#bekertLeiras").val(),
+            "ar": $("#bekertAr").val()
+        };
+        myAjax.adatkuldes(apiVegpont, ujAdat);
+    });
+    
     $(window).on("amodositgomb", (esemeny) => {
-        let aktTermek = esemeny.detail;
-        alert("módosítottál");
+        let aktTermek = esemeny.detail.id;
+        let ujAdat = {
+            "nev": $("#bekertNev").val(),
+            "kep": $("#bekertKep").val(),
+            "leiras": $("#bekertLeiras").val(),
+            "ar": $("#bekertAr").val()
+        };
+        myAjax.adatmodosit(apiVegpont, ujAdat, aktTermek);
     });
 });
 

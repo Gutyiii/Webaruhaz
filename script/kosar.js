@@ -1,20 +1,21 @@
 class Kosar {
     constructor() {
-        if((typeof(Storage) !== "undefined")){
+        if ((typeof (Storage) !== "undefined")) {
             this.kosar = [];
             let teliKosar = JSON.parse(localStorage.getItem("kosarban"));
             for (let elem in teliKosar) {
                 this.kosar.push(teliKosar[elem]);
                 this.megjelenit();
             }
-        }else{
+        } else {
             this.kosar = [];
         }
-        
+
     }
 
-    getKosar(){
-        for (const elem in this.kosar) {;
+    getKosar() {
+        for (const elem in this.kosar) {
+            ;
             console.log(this.kosar[elem]);
             $("#kosar").append(this.kosar[elem]);
         }
@@ -23,10 +24,11 @@ class Kosar {
     setKoarhozAdd(elem) {
         this.kosar.push(elem);
         this.megjelenit();
-        localStorage.setItem("kosarban",JSON.stringify(this.kosar));
+        localStorage.setItem("kosarban", JSON.stringify(this.kosar));
     }
 
     megjelenit() {
+        let tartalom = 0;
         //console.log(this.kosar);
         $("#kosar").empty();
         $("#kosar").append("<table>");
@@ -34,6 +36,7 @@ class Kosar {
         this.kosar.forEach((value, index) => {
             for (let item in value) {
                 elem += "<td>" + value[item] + "</td>";
+                tartalom++;
             }
             elem += "<td>" + "<button class='torol' data-id='" + index + "'>Töröl</button>" + "</td>";
             elem += "</tr>";
@@ -42,8 +45,13 @@ class Kosar {
         $(".torol").on("click", (event) => {
             let aktTermek = $(event.target).attr("data-id");
             this.kosar.splice(aktTermek, 1);
-            localStorage.setItem("kosarban",JSON.stringify(this.kosar));
+            localStorage.setItem("kosarban", JSON.stringify(this.kosar));
             this.megjelenit();
+            tartalom--;
+            if (tartalom == 0) {
+                console.log(tartalom);
+                $("#kosar").empty();
+            }
         });
     }
 }

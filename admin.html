@@ -10,12 +10,12 @@ and open the template in the editor.
     <title>TODO supply a title</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="../css/kozos.css" rel="stylesheet" type="text/css" />
-    <link href="../css/admin.css" rel="stylesheet" type="text/css" />
+    <link href="css/kozos.css" rel="stylesheet" type="text/css" />
+    <link href="css/admin.css" rel="stylesheet" type="text/css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="../script/kosar.js" type="text/javascript"></script>
-    <script src="../script/termek.js" type="text/javascript"></script>
-    <script src="../script/adminscript.js" type="text/javascript"></script>
+    <script src="script/ajax.js" type="text/javascript"></script>
+    <script src="script/termek.js" type="text/javascript"></script>
+    <script src="script/adminscript.js" type="text/javascript"></script>
 </head>
 
 <body>
@@ -32,26 +32,42 @@ and open the template in the editor.
         </header>
         <article>
             <table id="allomany">
-                <!--<tr class='fejlec'>
+                <thead>
+                <tr class='fejlec'>
                     <th>Név:</th>
                     <th>Kep:</th>
                     <th>Leírás:</th>
                     <th>Ár:</th>
                     <th>Valamiért index:</th>
-                </tr>-->
+                </tr>
                 <tr class="termek">
                     <td class="nev">Csodás tájkép:</td>
-                    <td class="kep"><img src="../kepek/kep1.jpg" alt="asd"></td>
+                    <td class="kep"><img src="kepek/kep1.jpg" alt="asd"></td>
                     <td class="leiras">Tükröződő fák egy kis tó partján a Duna mentén.</td>
                     <td class="ar">20000</td>
                     <td class="index">1</td>
-                    <td class="torolgomb"><button>Töröl</button></td>
+                    <td class="torolgomb"><input type="button" value="Töröl"></td>
                     <td class="modositgomb"><button>Módosít</button></td>
                     <!--<td class="torolgomb"><button>Töröl</button></td>
                     <td class="modositgomb"><button>Módósít</button></td>-->
                 </tr>
+                </thead>
             </table>
         </article>
+        <aside>
+            <input type="button" value="Új adat felvétele:" class="ujAdatFelv">
+            <form>
+                <label for="bekertNev">Név:</label>
+                <input type="text" name="bekertNev" id="bekertNev" placeholder="A név amit meg akarzs változtatni..."><br>
+                <label for="bekertKep">Kép:</label>
+                <input type="text" name="bekertKep" id="bekertKep" placeholder="A kép amit meg akarzs változtatni..."><br>
+                <label for="bekertLeiras">Leírás:</label>
+                <input type="text" name="bekertLeiras" id="bekertLeiras" placeholder="A leírás amit meg akarzs változtatni..."><br>
+                <label for="bekertAr">Ár:</label>
+                <input type="number" name="bekertAr" id="bekertAr" placeholder="Az ár amit meg akarzs változtatni..."><br>
+                
+            </form>
+        </aside>
         <footer>Gutyina András</footer>
     </main>
 </body>

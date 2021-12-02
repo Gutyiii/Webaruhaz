@@ -5,42 +5,64 @@ To change this template file, choose Tools | Templates
 and open the template in the editor.
 -->
 <html>
-    <head>
-        <title>TODO supply a title</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="css/kozos.css" rel="stylesheet" type="text/css"/>
-        <link href="css/stilus.css" rel="stylesheet" type="text/css"/>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <script src="script/kosar.js" type="text/javascript"></script>
-        <script src="script/termek.js" type="text/javascript"></script>
-        <script src="script/script.js" type="text/javascript"></script>
-    </head>
-    <body>
-        <main>
-            <nav>
-                <ul>
-                    <li><a href="#">Kezdőlap</a></li>
-                    <li><a href="admin.html">Admin</a></li>
-                    <li><a href="fizetes.html">Fizetés</a></li>
-                </ul>
-            </nav>
-            <header><h1>Webáruház</h1></header>
-            <article id="allomany">
-                <div class="termek">
-                    <h2 class="nev">Első kép címe:</h2>
-                    <img class="kep" src="kepek/kep1.jpg" alt="">
-                    <h6 class="leiras">Néhány szó a ksabnkabsfkabnkjbn kjanbf kf kbnka fbnka bsfbkna ksfbnkjabngrklnsfbjkn kjsfbn kask jasndf bjknask dfnbakjsfn bjkn</h6>
-                    <p class="ar">1500ft</p>
-                    <button>Kosárba</button>
-                </div>
-            </article>
-            <aside>
-                <div id="kosar">
 
-                </div>
-            </aside>
-            <footer>Gutyina András</footer>
-        </main>
-    </body>
+<head>
+    <title>TODO supply a title</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/kozos.css" rel="stylesheet" type="text/css" />
+    <link href="css/stilus.css" rel="stylesheet" type="text/css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="script/kosar.js" type="text/javascript"></script>
+    <script src="script/termek.js" type="text/javascript"></script>
+    <script src="script/ajax.js" type="text/javascript"></script>
+    <script src="script/script.js" type="text/javascript"></script>
+</head>
+
+<body>
+    <main>
+        <nav>
+            <ul>
+                <li><a href="#">Kezdőlap</a></li>
+                <li><a href="admin.html">Admin</a></li>
+                <li><a href="fizetes.html">Fizetés</a></li>
+            </ul>
+        </nav>
+        <header>
+            <h1>Webáruház</h1>
+        </header>
+        <article id="kereso">
+            <form>
+                <label for="kmezo">Keresőmező:</label>
+                <input type="text" name="kmezo" id="kmezo" placeholder="Írj be valamit...">
+                <label for="rendezes">Válaszd ki:</label>
+                <select name="rendezes" id="rendezes">
+                    <option value="alap">Alapértelmezett</option>
+                    <option value="forditott">Fordított</option>
+                </select>
+            </form>
+        </article>
+        <article id="allomany">
+
+        </article>
+        <aside>
+            <div id="kosar">
+
+            </div>
+        </aside>
+        <footer>Gutyina András
+
+            <div class="termek">
+                <h2 class="nev">Első kép címe:</h2>
+                <img class="kep" src="kepek/kep1.jpg" alt="">
+                <h6 class="leiras">Néhány szó a ksabnkabsfkabnkjbn kjanbf kf kbnka fbnka bsfbkna
+                    ksfbnkjabngrklnsfbjkn kjsfbn kask jasndf bjknask dfnbakjsfn bjkn</h6>
+                <p class="ar">1500ft</p>
+                <button>Kosárba</button>
+            </div>
+
+        </footer>
+    </main>
+</body>
+
 </html>

@@ -1,45 +1,53 @@
-[
+{
+  "termekek": [
     {
-        "nev": "Csodás tájkép",
-        "kep": "kepek/kep1.jpg",
-        "leiras": "Tükröződő fák egy kis tó partján a Duna mentén.",
-        "ar": 20000
+      "id": 1,
+      "nev": "Csodás tájkép",
+      "kep": "kepek/kep1.jpg",
+      "leiras": "Tükröződő fák egy kis tó partján a Duna mentén.",
+      "ar": 20000
     },
     {
-        "nev": "Tiszai gát",
-        "kep": "kepek/kep2.jpg",
-        "leiras": "Poroszló menti Tisza töltés viharos időben.",
-        "ar": 10000
+      "id": 2,
+      "nev": "Tiszai gát",
+      "kep": "kepek/kep2.jpg",
+      "leiras": "Poroszló menti Tisza töltés viharos időben.",
+      "ar": 10000
     },
     {
-        "nev": "Börzsöny",
-        "kep": "kepek/kep3.jpg",
-        "leiras": "Kilátás a fák mögül a szemközti hegyoldalra. Hollókő.",
-        "ar": 2300
+      "id": 2,
+      "nev": "Tiszai gát",
+      "kep": "kepek/kep2.jpg",
+      "leiras": "Poroszló menti Tisza töltés viharos időben.",
+      "ar": 10000
     },
     {
-        "nev": "Pléska-szikla felé",
-        "kep": "kepek/kep4.jpg",
-        "leiras": "Úton a Pléska-szikla felé az őszi erdőben.",
-        "ar": 22000
+      "id": 3,
+      "nev": "Börzsöny",
+      "kep": "kepek/kep3.jpg",
+      "leiras": "Kilátás a fák mögül a szemközti hegyoldalra. Hollókő.",
+      "ar": 2300
     },
     {
-        "nev": "Viadukt",
-        "kep": "kepek/kep5.jpg",
-        "leiras": "Biatorbágyi viadukt a fák között.",
-        "ar": 2300
+      "id": 4,
+      "nev": "Pléska-szikla felé",
+      "kep": "kepek/kep4.jpg",
+      "leiras": "Úton a Pléska-szikla felé az őszi erdőben.",
+      "ar": 22000
     },
     {
-        "nev": "Régi présház",
-        "kep": "kepek/kep6.jpg",
-        "leiras": "Elhagyott présház Biatorbágy fölött.",
-        "ar": 3000
+      "id": 5,
+      "nev": "Viadukt",
+      "kep": "kepek/kep5.jpg",
+      "leiras": "Biatorbágyi viadukt a fák között.",
+      "ar": 2300
     },
     {
-        "nev": "Nyakas-kő",
-        "kep": "kepek/kep7.jpg",
-        "leiras": "Innnen ugratta Ördög nevű lovát a mélybe Sándor Móricz gróf.",
-        "ar": 23000
+      "id": 6,
+      "nev": "Régi présház",
+      "kep": "kepek/kep6.jpg",
+      "leiras": "Elhagyott présház Biatorbágy fölött.",
+      "ar": 3000
     }
-
-]
+  ]
+}

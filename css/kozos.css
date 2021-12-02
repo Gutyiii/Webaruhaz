@@ -2,9 +2,22 @@
 
 main {
     width: 80%;
-    max-width: 1000px;
+    max-width: 1500px;
     margin: auto;
+    display: grid;
+    grid-template-areas: 
+    "n n n n n n"
+    "h h h h h h"
+    "k l l l l o"
+    "f f f f f f";
 }
+
+header{grid-area:h;}
+nav{grid-area:n;}
+#kereso{grid-area:k; background-color: cornsilk;}
+#allomany{grid-area:l;}
+aside{grid-area:o; background-color: cornsilk;}
+footer{grid-area:f;}
 
 img {
     width: 100%;
